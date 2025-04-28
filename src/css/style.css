@@ -1,0 +1,132 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 500px;
+}
+
+.board-container {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    
+    width: 700px;
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    box-sizing: border-box; 
+    padding: 10px; 
+}
+
+.board-items {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    flex: 1;
+    min-width: 0;
+    height: 400px; 
+    margin: 10px;
+    background-color: azure;
+    border: 1px solid black;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+}
+
+.board-title {
+    margin: 10px;
+
+}
+
+.form {
+    
+    margin-top: auto;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.btn-add {
+    
+
+    border: none;
+    background-color: azure;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+
+.btn-remove {
+    margin-left: 10px;
+    background-color: crimson;
+    background-image: url(/src/img/cross.svg);
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    padding: 0;
+    width: 11px;
+    height: 11px;
+    cursor: pointer;
+}
+
+.task-input {
+    display: block;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.task-list {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.task {
+    position: absolute;
+
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 30px;
+    font-size: 10px;
+    border: 1px solid black;
+    border-radius: 6px;
+    
+    margin-bottom: 5px;
+    background-color: #fff;
+
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+
+
+}
+
+.task-delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    margin-left: 10px;
+    background-color: crimson;
+    background-image: url(/src/img/cross.svg);
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    padding: 0;
+    width: 11px;
+    height: 11px;
+    cursor: pointer;
+}
+
+.dragged {
+    position: absolute;
+    z-index: 999;
+}
