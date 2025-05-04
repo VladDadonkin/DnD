@@ -1,29 +1,23 @@
-import { loadTasks } from './storage.js';
-import { TaskBoard } from './TaskBoard.js';
-import { addDrop } from './dragAndDrop.js';
+import { loadTasks } from "./storage.js";
+import { TaskBoard } from "./TaskBoard.js";
+import { addDrop } from "./dragAndDrop.js";
 
-document.addEventListener('DOMContentLoaded', () => {
-    const boards = document.querySelectorAll('.board-items');
-    boards.forEach(board => new TaskBoard(board));
+document.addEventListener("DOMContentLoaded", () => {
+  const boards = document.querySelectorAll(".board-items");
+  boards.forEach((board) => {
+    new TaskBoard(board);
 
+    const taskList = board.querySelector(".task-list");
+    addDrop(taskList);
+  });
 
-    addDrop ();
-    loadTasks();
-    
+  loadTasks();
 });
-
-
-
-
-
-
 
 // const containers = document.querySelectorAll('.board-items');
 // const forms = document.querySelectorAll('.form');
 // const addBtns = document.querySelectorAll('.btn-add');
 // const removeBtns = document.querySelectorAll('.btn-remove');
-
-
 
 // addBtns.forEach((addBtn, index) => {
 //     addBtn.addEventListener('click', (e) => {
@@ -31,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //         const form = forms[index];
 //         const board = containers[index];
-        
 
 //         let input = form.querySelector('.task-input');
 //         if (!input) {
@@ -39,11 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
 //             input.type = 'text';
 //             input.placeholder = 'Введите задачу';
 //             input.classList.add('task-input');
-            
 
 //             form.insertBefore(input, form.firstElementChild);
-//         } 
-        
+//         }
+
 //         input.addEventListener('keydown' , (e) => {
 //             if (e.key === 'Enter' && input.value.trim() !== '') {
 //                 const task = document.createElement('div');
@@ -77,9 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //             input.remove();
 //         }
 
-
-
 //         console.log('click remove')
 //     })
 // })
-

@@ -80,6 +80,7 @@ body {
     margin-bottom: 10px;
 }
 .task-list {
+    min-height: 46px;
     position: relative;
     width: 100%;
     max-width: 100%;
@@ -89,7 +90,7 @@ body {
 }
 
 .task {
-    position: absolute;
+    position: relative;
 
     padding-bottom: 5px;
     padding-top: 5px;
@@ -127,6 +128,6 @@ body {
 }
 
 .dragged {
-    position: absolute;
+    opacity: 0.5;
     z-index: 999;
 }
